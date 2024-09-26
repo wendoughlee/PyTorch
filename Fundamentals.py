@@ -17,6 +17,24 @@ import torch
 # example: Tensor [3, 224, 224] -> 3 color channels (R,G,B) height of 224px and width 224px
 
 # Scalar: single number , 0 dimension tensor
-
 scalar = torch.tensor(7)
-print(scalar)
+#print(scalar)
+
+# Get the Python number from scalar (a tensor), only works with one-element tensors
+scalar.item()
+#print(scalar.item())
+
+# Vector: a flexible single dimension tensor, can contain lots of numbers
+vector = torch.tensor([7,7])
+#print(vector)
+
+# Check number of dimensions of vector
+vector.ndim
+#print(vector.ndim)
+
+# TIP: You can tell the number of dimensions of a tensor 
+# by counting square brackets on the outside
+
+# Shape: Tells you how the elements inside the tensors are arranged
+vector.shape
+print(vector.shape)
